@@ -46,6 +46,40 @@ body {
 .nav-btn.signup { background: #0a0a0a; color: #ffffff; border: none; }
 .nav-btn.signup:hover { background: #333; }
 
+/* --- Mobile-friendly nav buttons --- */
+.nav-buttons {
+  gap: 10px;
+  flex-wrap: nowrap;           /* keep both on one line */
+}
+
+.nav-btn {
+  white-space: nowrap;         /* don't break into multiple lines */
+  line-height: 1;              /* tighter pill */
+}
+
+@media (max-width: 640px) {
+  .nav-buttons { gap: 8px; }
+  .nav-btn { 
+    padding: 8px 12px;         /* smaller pill */
+    font-size: 13px; 
+    border-radius: 999px; 
+  }
+}
+
+@media (max-width: 390px) {
+  .nav-btn { 
+    padding: 6px 10px;         /* extra small screens (iPhone mini etc.) */
+    font-size: 12px;
+  }
+  /* Use a shorter label for the partnerships button on tiny screens */
+  .nav-btn.partners .label-desktop { display: none; }
+  .nav-btn.partners .label-mobile { display: inline; }
+}
+
+@media (max-width: 480px){
+  .nav-btn.partners{ display:none; }
+}
+
 /* ====== Hero ====== */
 .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; position: relative; padding: 140px 32px 80px; background: #ffffff; }
 .hero-container { max-width: 1200px; width: 100%; position: relative; z-index: 10; }
@@ -994,8 +1028,8 @@ body {
       </div> -->
       <div class="nav-buttons">
         <!-- <a href="#login" class="nav-btn login">Log in</a> -->
-        <a href="#signup" class="nav-btn signup">Get early access</a>
-          <a href="#signup" class="nav-btn signup">For partnerships</a>
+        <a href="https://tally.so/r/w22zZb" class="nav-btn signup">Join waitlist</a>
+          <a href="https://tally.so/r/3Epo5B" class="nav-btn signup">For partnerships</a>
 
       </div>
     </div>
@@ -1635,10 +1669,10 @@ body {
 
     <div class="cta-actions">
       <a class="cta-btn primary"
-         href="https://your-waitlist-link.com"
+         href="https://tally.so/r/w22zZb"
          target="_blank" rel="noopener noreferrer"
          aria-label="Join the Playpal waitlist (opens in a new tab)">
-        Get early access
+        Join the waitlist
       </a>
       <!-- <a class="cta-btn ghost" href="#app-demo">See how it works</a> -->
     </div>
